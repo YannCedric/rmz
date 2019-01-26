@@ -1,8 +1,8 @@
 const fetch = require('node-fetch')
 
-async function script (dateFrom="2018-02-19", dateTo="2018-02-19") {
+async function script (dateFrom="2018-02-19", dateTo="2018-02-19", offset=20, limit=20) {
 
-    const plays = await fetch(`https://conuhacks-playback-api.touchtunes.com/plays?startDate=${dateFrom}T21:00:00Z&endDate=${dateTo}T22:00:00Z&offset=25865`,
+    const plays = await fetch(`https://conuhacks-playback-api.touchtunes.com/plays?startDate=${dateFrom}T21:00:00Z&endDate=${dateTo}T22:00:00Z&offset=${offset}&limit=${limit}`,
     {
         method: 'GET',
         headers: {'client-secret': '9923ac9b-8fd3-421f-b0e5-952f807c6885'},
